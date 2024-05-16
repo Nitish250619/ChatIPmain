@@ -1,0 +1,6 @@
+.FileAccesIcon{
+    fill: black;
+    padding: 0px 10px 0px 0px;
+    width: clamp(20px, 5vw, 30px); /* Adjust the size of the icon using clamp */
+    height: auto;
+}

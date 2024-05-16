@@ -1,0 +1,19 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  background: #b832b31c;
+  background: linear-gradient(
+    180deg,
+    rgba(89, 63, 128, 0.75) 4.48%,
+    rgba(118, 67, 135, 0.75) 25.41%,
+    rgba(122, 68, 136, 0.75) 41.05%,
+    rgba(122, 68, 136, 0.75) 65.11%,
+    rgba(144, 72, 142, 0.75) 87.24%,
+    rgba(179, 77, 150, 0.75) 100%
+  );
+}
