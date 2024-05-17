@@ -33,7 +33,8 @@ const ChatInterface = () => {
       <Box 
         component="div" 
         sx={{
-          flex: 1,         
+          flex: 1,
+          height: 'calc(100% - 55px)',         
           overflow: 'auto', 
           display: 'flex',
           flexDirection: 'column-reverse',
