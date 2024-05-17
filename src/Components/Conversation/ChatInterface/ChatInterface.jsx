@@ -34,7 +34,7 @@ const ChatInterface = () => {
         component="div" 
         sx={{
           flex: 1,
-          height: 'calc(100% - 55px)',         
+          height: 'calc(100vh - 85px)',         
           overflow: 'auto', 
           display: 'flex',
           flexDirection: 'column-reverse',
