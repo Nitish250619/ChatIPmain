@@ -26,7 +26,8 @@ const ChatInterface = () => {
           lg: '80%'
         },
         display: 'flex', 
-        flexDirection: 'column', 
+        flexDirection: 'column',
+        position:"relative" 
       }}
     >
       <Box 
@@ -50,7 +51,9 @@ const ChatInterface = () => {
         component="div" 
         sx={{
           height: "55px",
-          marginY:"5px",
+          margin:"30px 0px 8px 0px",
+          position: 'sticky',
+          bottom: 0,
         }}
       >
        <ChatInput/>

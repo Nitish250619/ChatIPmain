@@ -36,6 +36,7 @@ const ChatInput = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "end",
+        bgcolor:"inherit",
       }}
     >
       <ChatEmoji handleEmojiSelect={handleEmojiSelect} />
@@ -44,7 +45,7 @@ const ChatInput = () => {
         variant="outlined"
         type="text"
         multiline
-        maxRows={4}
+        maxRows={3}
         placeholder="Type a message..."
         value={inputText}
         onChange={handleInputChange}
