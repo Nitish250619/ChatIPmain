@@ -13,12 +13,16 @@ const SentMessage = ({text}) => {
     <Box
       sx={{
         display: "inline-block",
-        bgcolor: "#dc6d36",
+        bgcolor: "#EDEDED9C",
         maxWidth: "70%", 
         textAlign: "left", 
+        borderRadius:"20px 0px 20px 20px",
+        marginRight:"10px",
         p: "8px", 
         alignSelf: "flex-end",
         maxHeight: "100%",
+        wordBreak:"break-word",
+        overflowWrap:"break-word",
         fontSize: isMobile
           ? "14px"
           : isTablet

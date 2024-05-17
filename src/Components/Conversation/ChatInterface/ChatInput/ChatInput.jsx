@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import  IconButton  from "@mui/material/IconButton";
+import  InputAdornment from "@mui/material/InputAdornment";
 import ChatEmoji from "./ChatEmoji/ChatEmoji";
 import ChatFileAcces from "./ChatFileAcces/ChatFileAcces";
 import ChatMic from "./ChatMic/ChatMic";
@@ -14,12 +16,12 @@ const ChatInput = () => {
     setInputText(e.target.value);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter" && inputText.trim() !== "") {
-      addMessage(inputText); 
-      setInputText("");
+  const handleSendMessage =()=>{
+    if(inputText.trim() !== ""){
+        addMessage(inputText);
+        setInputText("");
     }
-  };
+  }
 
   const handleEmojiSelect = (emoji) => {
     setInputText((prevText) => prevText + emoji.native); 
@@ -29,12 +31,11 @@ const ChatInput = () => {
     <Box
       component="div"
       sx={{
-        bgcolor: "grey",
         height: "100%",
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "end",
       }}
     >
       <ChatEmoji handleEmojiSelect={handleEmojiSelect} />
@@ -42,23 +43,21 @@ const ChatInput = () => {
       <TextField
         variant="outlined"
         type="text"
+        multiline
+        maxRows={4}
         placeholder="Type a message..."
         value={inputText}
         onChange={handleInputChange}
-        onKeyPress={handleKeyPress}
         sx={{
           flexGrow: 1,
           fontSize: "clamp(14px, 2vw, 18px)",
           bgcolor: "#00000026",
-          height: "40px",
-          borderRadius: "50px",
+          borderRadius: "20px",
           "& .MuiOutlinedInput-root": {
-            padding: "0",
-            height: "40px",
+            padding: "8px 12px",
             "& .MuiOutlinedInput-input": {
-              padding: "8px 20px",
-              height: "24px",
               boxSizing: "border-box",
+              overflow:"hidden",
             },
             color: "white",
             "&::placeholder": {
@@ -71,6 +70,22 @@ const ChatInput = () => {
           "&:focus": {
             outline: "none",
           },
+        }}
+        InputProps={{
+            endAdornment: (
+                <InputAdornment position="end">
+                    <IconButton
+                    edge="end"
+                    onClick={handleSendMessage}
+                    sx={{paddingRight:"10px" , bgcolor:"transparent", margin:"0", '&:hover':{bgcolor:"transparent"}}}
+                    >
+                        <span style={{cursor:"pointer" , fontSize:"16px" , color:"white"}}
+                        >
+                            Send
+                        </span>
+                    </IconButton>
+                </InputAdornment>
+            )
         }}
       />
 

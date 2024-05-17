@@ -32,8 +32,7 @@ const ChatInterface = () => {
       <Box 
         component="div" 
         sx={{
-          flex: 1, 
-          bgcolor: "lightblue",         
+          flex: 1,         
           overflow: 'auto', 
           display: 'flex',
           flexDirection: 'column-reverse',
@@ -42,7 +41,7 @@ const ChatInterface = () => {
           
         }}
       >
-          {messages.slice().reverse().map((message) => ( // Reverse the order of messages
+          {messages.slice().reverse().map((message) => ( 
           <SentMessage key={message.id} text={message.text} />
         ))}
       </Box>
@@ -51,6 +50,7 @@ const ChatInterface = () => {
         component="div" 
         sx={{
           height: "55px",
+          marginY:"5px",
         }}
       >
        <ChatInput/>
