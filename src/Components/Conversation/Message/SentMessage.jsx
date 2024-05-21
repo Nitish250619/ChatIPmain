@@ -30,6 +30,7 @@ const SentMessage = ({text}) => {
           : isLaptop
           ? "18px"
           : "inherit", 
+          whiteSpace:"pre-wrap"
       }}
     >
       {text}
